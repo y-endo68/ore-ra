@@ -1,0 +1,178 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+  }
+
+
+.split{
+    width: 100%;    
+}
+.split-item{
+    display: table-cell;
+    padding: 0px;
+    width: 50%;
+}
+.split-left{
+    background: #000;
+    color: #fff;
+    position: relative;
+}
+.split-left__inner{
+    position: fixed;
+    width: 50%;
+}
+
+.slider-img {
+    position: fixed;
+    width: 48%;
+    line-height: 0;
+    height: 100vh;
+}
+
+.split-right__inner{
+    height: 100%;
+    background: linear-gradient(-135deg, #ffffff, #fff9ee);
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.top {
+    text-align: center;
+    padding: 450px 0;
+}
+
+.top h1 {
+    font-size: 70px;
+}
+
+.news-contents {
+    padding: 60px 40px 0 40px;
+}
+
+.news-contents li {
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+.news-contents li:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #666;
+    margin-left: 10px;
+}
+
+.news-contents p {
+    padding-top: 5px ;
+}
+
+.movie {
+    padding: 60px 0;
+   
+}
+
+.movie video {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.member-plofile a {
+    width: 25%;
+}
+
+
+/*プロフィール画像のアニメーション*/
+.img_wrap{
+    border: 0px solid #ddd;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+  .img_wrap img{
+    transform: scale(1.1);
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
+  }
+  .img_wrap img:hover{
+    filter: grayscale(0);
+    transition-duration: 0.5s;
+  }
+
+  /* タイトルアニメーションの指定 */
+.top h1 {
+    animation: SlideIn 2.5s;
+  }
+  
+  @keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/*スマホ用レイアウト*/
+@media(max-width: 480px) {
+
+    .split-item{
+        display: initial;
+    }
+    .split-left{
+        position: initial;
+    }
+    .split-left__inner{
+        position: initial;
+        width: 100%;
+    }
+    
+    .slider-img {
+        position: initial;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .top {
+        padding: 80px 0 130px 0;
+    }
+
+    .top h1 {
+        font-size: 40px;
+    }
+
+    .news-contents {
+        padding: 40px 20px 0 20px;
+    }
+
+    .img_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img_wrap a {
+        width: 50%;
+        flex: auto;
+    }
+
+    .img_wrap img {
+        width: 100%;
+    }
+}
