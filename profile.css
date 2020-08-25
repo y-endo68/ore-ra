@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: linear-gradient(-135deg, #ffffff, #fff9ee);
+}
+
+li {
+    list-style: none;
+  }
+
+.whole {
+    margin-left: 100px;
+    width: 80%;
+}
+
+.contents-wrapper {
+    display: flex;
+}
+
+
+.logo {
+    padding-top: 15px;
+    border: rgba(0, 0, 0, 0.7) solid 2px ;
+    height: 100px;
+    
+    vertical-align: bottom;
+    width: 100%;
+    font-size: 60px;
+    border-top: none;
+}
+
+.image {
+    width: 50%;
+    border-right: rgba(0, 0, 0, 0.7) solid 2px ;
+    border-left: rgba(0, 0, 0, 0.7) solid 2px ;
+    border-bottom: rgba(0, 0, 0, 0.7) solid 2px ;
+}
+
+.split-right {
+    width: 50%;
+    border-right: rgba(0, 0, 0, 0.7) solid 2px ;
+    border-bottom: rgba(0, 0, 0, 0.7) solid 2px ;
+}
+
+.name {
+    padding: 30px 40px;
+    width: 100%;
+    border-bottom: rgba(0, 0, 0, 0.7) solid 2px ;
+    font-family: "Yu Mincho", "YuMincho";
+}
+
+.name h1 {
+    font-size: 60px;
+}
+
+.plofile {
+    padding: 30px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+@media(max-width: 480px){
+    .contents-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .whole {
+        margin-left: initial;
+    }
+
+    .whole, .image, .split-right {
+        width: initial;
+    }
+
+    .image {
+        width:100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
